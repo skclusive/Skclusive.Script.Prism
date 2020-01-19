@@ -1,4 +1,4 @@
-@namespace Skclusive.Script.Prisma
+@namespace Skclusive.Script.Prism
 @inherits EventComponentBase
 <pre><code
         class="@__Class"
@@ -12,7 +12,7 @@
     public string Language { set; get; } = "jsx";
 
     [Inject]
-    public IPrismaHighlighter Highlighter { set; get; }
+    public IPrismHighlighter Highlighter { set; get; }
 
     private string __Class => $"{_Class} language-{Language}";
 

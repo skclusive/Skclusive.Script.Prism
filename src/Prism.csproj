@@ -5,16 +5,16 @@
     <VersionSuffix>$(VersionSuffix)</VersionSuffix>
     <TargetFramework>netstandard2.1</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
-    <AssemblyName>Skclusive.Script.Prisma</AssemblyName>
-    <PackageId>Skclusive.Script.Prisma</PackageId>
-    <RootNamespace>Skclusive.Script.Prisma</RootNamespace>
-    <Description>Prisma Code Highlighter for Blazor</Description>
+    <AssemblyName>Skclusive.Script.Prism</AssemblyName>
+    <PackageId>Skclusive.Script.Prism</PackageId>
+    <RootNamespace>Skclusive.Script.Prism</RootNamespace>
+    <Description>Prism Code Highlighter for Blazor</Description>
     <Authors>Skclusive</Authors>
     <Company>Skclusive</Company>
     <Copyright>Skclusive</Copyright>
-    <PackageTags>Prisma Code Highlighter for Blazor</PackageTags>
-    <PackageProjectUrl>https://github.com/skclusive/Skclusive.Script.Prisma</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/skclusive/Skclusive.Script.Prisma</RepositoryUrl>
+    <PackageTags>Prism Code Highlighter for Blazor</PackageTags>
+    <PackageProjectUrl>https://github.com/skclusive/Skclusive.Script.Prism</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/skclusive/Skclusive.Script.Prism</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

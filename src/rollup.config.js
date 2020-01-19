@@ -1,12 +1,12 @@
 import resolve from "rollup-plugin-node-resolve";
-//import { terser } from "rollup-plugin-terser";
+import { terser } from "rollup-plugin-terser";
 
 process.env.INCLUDE_DEPS === "true";
 module.exports = {
-  input: "Prisma/Scripts/Prisma.js",
+  input: "Prism/Scripts/Prism.js",
   output: {
-    file: "wwwroot/Prisma.js",
+    file: "wwwroot/Prism.js",
     format: "iife"
   },
-  plugins: [resolve()]//, terser()]
+  plugins: [resolve(), terser()]
 };

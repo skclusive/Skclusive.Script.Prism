@@ -58,7 +58,7 @@ window.Skclusive = {
   Script: {
     // @ts-ignore
     ...(window.Skclusive || {}).Script,
-    Prisma: {
+    Prism: {
       highlight
     }
   }

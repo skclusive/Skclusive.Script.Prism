@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 
-namespace Skclusive.Script.Prisma
+namespace Skclusive.Script.Prism
 {
 
-    public interface IPrismaHighlighter
+    public interface IPrismHighlighter
     {
         Task<MarkupString> HighlightAsync(string code, string language);
     }

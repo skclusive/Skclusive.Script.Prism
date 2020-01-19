@@ -1,6 +1,6 @@
 ﻿using Skclusive.Core.Component;
 
-namespace Skclusive.Script.Prisma
+namespace Skclusive.Script.Prism
 {
     public class CoreStyleComponentBase : StaticComponentBase
     {

@@ -1,18 +1,18 @@
-Skclusive.Script.Prisma
+Skclusive.Script.Prism
 =============================
 
-Code Highliter component library for Blazor. Integrating PrismaJs.
+Code Highliter component library for Blazor. Integrating PrismJs.
 
 ## Installation
 
-Add a reference to the library from [![NuGet](https://img.shields.io/nuget/v/Skclusive.Script.Prisma.svg)](https://www.nuget.org/packages/Skclusive.Script.Prisma/)
+Add a reference to the library from [![NuGet](https://img.shields.io/nuget/v/Skclusive.Script.Prism.svg)](https://www.nuget.org/packages/Skclusive.Script.Prism/)
 
 ## Usage
 
 Add the following in `_Imports.razor`:
 
 ```cs
-@using Skclusive.Script.Prisma
+@using Skclusive.Script.Prism
 ```
 
 Make the registration in **Startup.cs**
@@ -22,7 +22,7 @@ public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddPrisma();
+        services.AddPrism();
     }
 
     public void Configure(IComponentsApplicationBuilder app)
@@ -35,17 +35,17 @@ public class Startup
 Add the resources in **App.razor**
 
 ```html
-<PrismaStyles />
-<PrismaScript />
+<PrismStyles />
+<PrismScript />
 
 <Router AppAssembly="@typeof(Program).Assembly">
     ....
 </Router>
 ```
 
-you can use the **PrismaCode** component to render code block as blow
+you can use the **PrismCode** component to render code block as blow
 
-![PrismaCode](images/usage.png)
+![PrismCode](images/usage.png)
 
 Following is the rendered output in dark theme.
 
@@ -53,4 +53,4 @@ Following is the rendered output in dark theme.
 
 ## License
 
-Skclusive.Script.Prisma is licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php)
+Skclusive.Script.Prism is licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php)

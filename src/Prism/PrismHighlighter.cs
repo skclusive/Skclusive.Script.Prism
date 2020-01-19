@@ -2,20 +2,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
-namespace Skclusive.Script.Prisma
+namespace Skclusive.Script.Prism
 {
-    public class PrismaHighlighter : IPrismaHighlighter
+    public class PrismHighlighter : IPrismHighlighter
     {
         private IJSRuntime JSRuntime { get; }
 
-        public PrismaHighlighter(IJSRuntime jsruntime)
+        public PrismHighlighter(IJSRuntime jsruntime)
         {
             JSRuntime = jsruntime;
         }
 
         public async Task<MarkupString> HighlightAsync(string code, string language)
         {
-            string hilighted = await JSRuntime.InvokeAsync<string>("Skclusive.Script.Prisma.highlight", code, language);
+            string hilighted = await JSRuntime.InvokeAsync<string>("Skclusive.Script.Prism.highlight", code, language);
 
             return new MarkupString(hilighted);
         }
