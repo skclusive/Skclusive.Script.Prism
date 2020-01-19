@@ -53,4 +53,4 @@ Following is the rendered output in dark theme.
 
 ## License
 
-Skclusive.Material.Component is licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php)
+Skclusive.Script.Prisma is licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php)
