@@ -45,7 +45,17 @@ Add the resources in **App.razor**
 
 you can use the **PrismCode** component to render code block as blow
 
-![PrismCode](images/usage.png)
+```html
+<PrismCode
+  Code="@(@"<body>
+    <div style=""padding: 20px;"">
+      <Grid Container Spacing=""@Spacing.Five"">
+        //...
+      </Grid>
+    </div>
+  </body>")"
+/>
+```
 
 Following is the rendered output in dark theme.
 
