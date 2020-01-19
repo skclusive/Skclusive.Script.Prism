@@ -1,0 +1,35 @@
+@namespace Skclusive.Script.Prisma
+@inherits EventComponentBase
+<pre><code
+        class="@__Class"
+        style="@_Style">@hilighted</code></pre>
+@code
+{
+    [Parameter]
+    public string Code { set; get; }
+
+    [Parameter]
+    public string Language { set; get; } = "jsx";
+
+    [Inject]
+    public IPrismaHighlighter Highlighter { set; get; }
+
+    private string __Class => $"{_Class} language-{Language}";
+
+    private MarkupString hilighted { set; get; }
+
+    protected override void OnAfterMount()
+    {
+        RunTimeout(() =>
+        {
+            _ = HighlightAsync();
+        }, 100);
+    }
+
+    private async Task HighlightAsync()
+    {
+        hilighted = await Highlighter.HighlightAsync(Code, Language);
+
+        StateHasChanged();
+    }
+}
