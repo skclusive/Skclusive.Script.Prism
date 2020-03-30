@@ -1,12 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Skclusive.Script.Prism
 {
     public static class PrismExtension
     {
-        public static void AddPrism(this IServiceCollection services)
+        public static void TryAddPrismServices(this IServiceCollection services)
         {
-            services.AddSingleton<IPrismHighlighter, PrismHighlighter>();
+            services.TryAddScoped<IPrismHighlighter, PrismHighlighter>();
         }
     }
 }

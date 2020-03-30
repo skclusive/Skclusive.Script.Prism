@@ -2,7 +2,7 @@
 @inherits EventComponentBase
 <pre><code
         class="@__Class"
-        style="@_Style">@hilighted</code></pre>
+        style="@_Style">@Hilighted</code></pre>
 @code
 {
     [Parameter]
@@ -16,19 +16,23 @@
 
     private string __Class => $"{_Class} language-{Language}";
 
-    private MarkupString hilighted { set; get; }
+    private MarkupString Hilighted { set; get; }
 
-    protected override void OnAfterMount()
+    protected override async Task OnAfterMountAsync()
     {
-        RunTimeout(() =>
-        {
-            _ = HighlightAsync();
-        }, 100);
+        await HighlightAsync();
+    }
+
+    protected override async Task OnAfterUpdateAsync()
+    {
+        await HighlightAsync();
     }
 
     private async Task HighlightAsync()
     {
-        hilighted = await Highlighter.HighlightAsync(Code, Language);
+        await Task.Delay(100);
+
+        Hilighted = await Highlighter.HighlightAsync(Code, Language);
 
         StateHasChanged();
     }

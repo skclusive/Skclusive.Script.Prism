@@ -2,8 +2,12 @@
 
 namespace Skclusive.Script.Prism
 {
-    public class PrismScript : ScriptComponentBase
+    public class PrismScript : Scripted
     {
+        public PrismScript(): base("PrismScript")
+        {
+        }
+
         protected override string GetScript()
         {
             return

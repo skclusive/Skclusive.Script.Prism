@@ -1,5 +1,14 @@
 @namespace Skclusive.Script.Prism
-@inherits StaticComponentBase
+@inherits ThemeComponentBase
 
-<PrismLightStyle />
-<PrismDarkStyle />
+@if (IsAuto || IsLight)
+{
+    <PrismLightStyle
+        Media="@IsAuto"/>
+}
+
+@if (IsAuto || IsDark)
+{
+    <PrismDarkStyle
+        Media="@IsAuto"/>
+}
