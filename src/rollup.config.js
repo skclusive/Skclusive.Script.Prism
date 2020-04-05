@@ -5,7 +5,7 @@ process.env.INCLUDE_DEPS === "true";
 module.exports = {
   input: "Prism/Scripts/Prism.js",
   output: {
-    file: "wwwroot/Prism.js",
+    file: "artifacts/Prism.js",
     format: "iife"
   },
   plugins: [resolve(), terser()]
