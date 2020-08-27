@@ -19,5 +19,10 @@ namespace Skclusive.Script.Prism
 
             return new MarkupString(hilighted);
         }
+
+        public async Task HighlighterAsync(ElementReference element, string code, string language)
+        {
+            await JSRuntime.InvokeVoidAsync("Skclusive.Script.Prism.highlighter", element, code, language);
+        }
     }
 }

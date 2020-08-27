@@ -51,6 +51,13 @@ function highlight(code, language) {
   return prism.highlight(code, prismLanguage, language);
 }
 
+function highlighter(element, code, language) {
+  if (element) {
+    const content = highlight(code, language);
+    element.innerHTML = content;
+  }
+}
+
 // @ts-ignore
 window.Skclusive = {
   // @ts-ignore
@@ -59,7 +66,8 @@ window.Skclusive = {
     // @ts-ignore
     ...(window.Skclusive || {}).Script,
     Prism: {
-      highlight
+      highlight,
+      highlighter
     }
   }
 };
