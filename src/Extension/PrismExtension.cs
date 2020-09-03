@@ -6,11 +6,12 @@ namespace Skclusive.Script.Prism
 {
     public static class PrismExtension
     {
-        public static void TryAddPrismServices(this IServiceCollection services)
+        public static void TryAddPrismServices(this IServiceCollection services, ICoreConfig config)
         {
+            services.TryAddCoreServices(config);
             services.TryAddScoped<IPrismHighlighter, PrismHighlighter>();
-            services.AddScoped<IScriptTypeProvider, PrismScriptProvider>();
-            services.AddScoped<IStyleTypeProvider, PrismStyleProvider>();
+            services.TryAddScriptTypeProvider<PrismScriptProvider>();
+            services.TryAddStyleTypeProvider<PrismStyleProvider>();
         }
     }
 }

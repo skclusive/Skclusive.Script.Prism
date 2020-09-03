@@ -16,13 +16,13 @@
     <RepositoryUrl>https://github.com/skclusive/Skclusive.Script.Prism</RepositoryUrl>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Skclusive.Core.Component" Version="3.0.3-preview1" />
-  </ItemGroup>
-
   <!-- <ItemGroup>
-    <ProjectReference Include="..\..\Skclusive.Core.Component\src\Component.csproj" Version="3.0.3-preview1" />
+    <PackageReference Include="Skclusive.Core.Component" Version="3.0.4-preview1" />
   </ItemGroup> -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Skclusive.Core.Component\src\Component.csproj" Version="3.0.4-preview1" />
+  </ItemGroup>
 
   <Target Name="BuildFrontend" BeforeTargets="Build">
     <Exec Command="npm install" />

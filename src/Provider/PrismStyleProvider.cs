@@ -4,7 +4,7 @@ namespace Skclusive.Script.Prism
 {
     public class PrismStyleProvider : StyleTypeProvider
     {
-        public PrismStyleProvider() : base(typeof(PrismStyles))
+        public PrismStyleProvider() : base(typeof(PrismLightStyle), typeof(PrismDarkStyle))
         {
         }
     }
