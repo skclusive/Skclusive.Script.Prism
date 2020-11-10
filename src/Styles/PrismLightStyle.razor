@@ -1,10 +1,9 @@
 ﻿@namespace Skclusive.Script.Prism
 @inherits ThemeComponentBase
 
-<Styled
-    Name="PrismLight">
-
-    @if (Media) {
+<Condition
+    If="@(IsAuto || IsLight)">
+    @if (IsAuto) {
         @MediaSchemeLight @OpenCurly
     }
             code[class*="language-"],
@@ -133,14 +132,7 @@
             .token.entity {
                 cursor: help;
             }
-    @if (Media) {
+    @if (IsAuto) {
         @CloseCurly
     }
-
-</Styled>
-
-@code
-{
-    [Parameter]
-    public bool Media { set; get; }
-}
+</Condition>

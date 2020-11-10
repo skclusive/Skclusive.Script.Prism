@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <VersionPrefix>2.0.0</VersionPrefix>
+    <VersionPrefix>5.0.0</VersionPrefix>
     <VersionSuffix>$(VersionSuffix)</VersionSuffix>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <RazorLangVersion>3.0</RazorLangVersion>
+    <TargetFramework>net5.0</TargetFramework>
     <AssemblyName>Skclusive.Script.Prism</AssemblyName>
     <PackageId>Skclusive.Script.Prism</PackageId>
     <RootNamespace>Skclusive.Script.Prism</RootNamespace>
@@ -18,14 +17,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Skclusive.Core.Component" Version="2.0.0" />
+    <PackageReference Include="Skclusive.Core.Component" Version="5.0.0" />
   </ItemGroup>
 
   <!-- <ItemGroup>
-    <ProjectReference Include="..\..\Skclusive.Core.Component\src\Component.csproj" Version="2.0.0" />
+    <ProjectReference Include="..\..\Skclusive.Core.Component\src\Component.csproj" Version="5.0.0" />
   </ItemGroup> -->
 
   <Target Name="BuildFrontend" BeforeTargets="Build">
+    <Exec Command="npm install" />
     <Exec Command="npm run build" />
   </Target>
 

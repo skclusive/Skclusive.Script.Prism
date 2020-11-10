@@ -1,10 +1,13 @@
 @namespace Skclusive.Script.Prism
 @inherits EventComponentBase
 <pre><code
+        @ref="@_codeRef"
         class="@__Class"
-        style="@_Style">@Hilighted</code></pre>
+        style="@_Style"></code></pre>
 @code
 {
+    private ElementReference _codeRef;
+
     [Parameter]
     public string Code { set; get; }
 
@@ -15,8 +18,6 @@
     public IPrismHighlighter Highlighter { set; get; }
 
     private string __Class => $"{_Class} language-{Language}";
-
-    private MarkupString Hilighted { set; get; }
 
     protected override async Task OnAfterMountAsync()
     {
@@ -30,10 +31,6 @@
 
     private async Task HighlightAsync()
     {
-        await Task.Delay(100);
-
-        Hilighted = await Highlighter.HighlightAsync(Code, Language);
-
-        StateHasChanged();
+        await Highlighter.HighlighterAsync(_codeRef, Code, Language);
     }
 }
